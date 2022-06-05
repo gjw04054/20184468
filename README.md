@@ -1,11 +1,13 @@
 ># 리눅스 명령어와 vim 매크로 _ 20184468
-
+<br/>
 
 >>## __1. 리눅스 명령어__
   * TOP
   * PS
   * JOBS
   * KILL
+
+<br/>
 
 ### __1-1. Top__
     top 명령어는 현재 os의 상태를 나타내주는 CLI 어플리케이션(Command-line Interface)입니다. 
@@ -79,7 +81,6 @@
     |%MEM|프로세스가 사용하는 메모리의 사용률|
     |COMMAND|실행된 명령어|
 
-
 * **단축키 명령어**
 
     |명령어|설명|
@@ -96,9 +97,49 @@
     |n or #|출력할 프로세스의 수를 지정|
     |s|출력할 정보의 업데이트의 시간을 지정|
     |q|종료|
-  
+
+<br/>
+<br/>
+
+  ### __1-2. PS__
+    ps는 process status의 줄임말이며, 현재 실행중인 프로세스 목록과 상태를 출력하여 보여주는 기능을 합니다.
+    윈도우의 작업 관리자와 비슷합니다.
+ 
+ <br/>
+ 
+  * **자주 사용되는 ps 명령어 옵션**
     
-    
+    |명령어|설명|
+    |:---:|:---:|
+    |ps -ef|모든 프로세스를 풀 포맷으로 출력|
+    |ps -ef|grep'프로세스명'|'프로세스명'의 프로세스 구동 확인|
+    |ps aux|실행중인 모든 프로세스 확인|
+    |ps auxf|실행 중인 프로세스를 트리구조로 출력|
+    |ps auxfww|실행 중인 프로세스를 트리구조 + 모든 실행 중인 옵션 확인 가능|
+
+    + $ps aux 결과 모습
+![image](https://user-images.githubusercontent.com/45027599/172049211-221bd67e-1b2f-4c13-b022-39b3614e20bd.png)
+
+
+      + USER : 프로세스의 소유자의 이름
+      + PID : 프로세스 식별자, 참고로 PPID는 부모프로세스 식별자
+      + %CPU : CPU 점유율 
+      + %MEM : Memory 점유율 
+      + VSZ : Virtual memory size (가상메모리 사용량, KB 혹은 페이지 단위)
+      + RSS : Risident Set Size의 약어, 실제 메모리 사용량
+      + STAT : Status code (BSD계열)
+      + START : 시작 시간
+      + TIME : 총 수행시간(=총 CPU사용시간)
+      + COMMAND : 프로세스 수행 명령어
+
+
+    + $ps -ef 결과 모습
+![image](https://user-images.githubusercontent.com/45027599/172049248-cddb7b6f-dc56-4f23-af52-b3675d0c8d20.png)
+
+    + $ps aux 결과 모습
+
+
+
  
 
 
